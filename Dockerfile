@@ -2,7 +2,7 @@ FROM maven:3.8.4-jdk-11
 
 # Firefox
 
-ARG FIREFOX_VERSION=98.0
+ARG FIREFOX_VERSION=102.0
 RUN apt-get update -qqy \
 	&& apt-get -qqy install libgtk-3-0 libx11-xcb1 libdbus-glib-1-2 libxt6 libasound2 \
 	&& rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
