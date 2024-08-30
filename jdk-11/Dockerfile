@@ -13,6 +13,7 @@ RUN apt-get update -qqy \
 	&& ln -s /opt/firefox-$FIREFOX_VERSION/firefox /usr/bin/firefox
 
 
+
 # Geckodriver
 
 ARG GECKODRIVER_VERSION=v0.34.0

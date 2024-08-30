@@ -23,7 +23,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./jdk-17
+          context: ./jdk-11
           push: true
           tags: janroeser/maven-geckodriver-jdk11:jdk11
           

@@ -2,7 +2,7 @@ FROM maven:3.9.6-eclipse-temurin-17
 
 # Firefox
 
-ARG FIREFOX_VERSION=129.0
+ARG FIREFOX_VERSION=128.0
 RUN apt-get update -qqy \
 	&& apt-get -qqy install libgtk-3-0 libx11-xcb1 libdbus-glib-1-2 libxt6 libasound2 \
 	&& rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
@@ -15,7 +15,7 @@ RUN apt-get update -qqy \
 
 # Geckodriver
 
-ARG GECKODRIVER_VERSION=v0.35.0
+ARG GECKODRIVER_VERSION=v0.34.0
 RUN wget -q -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-$GECKODRIVER_VERSION-linux64.tar.gz \
 	&& tar xzf /tmp/geckodriver.tar.gz -C /opt \
 	&& rm /tmp/geckodriver.tar.gz \
