@@ -3,7 +3,7 @@ name: Publish Docker image
 on:
   push:
     paths:
-      - 'jdk-11/**'
+      - 'jdk-17/**'
   workflow_dispatch:
 
 jobs:
@@ -25,5 +25,4 @@ jobs:
         with:
           context: ./jdk-17
           push: true
-          tags: janroeser/maven-geckodriver-jdk11:jdk11
-          
+          tags: janroeser/maven-geckodriver-jdk11:jdk17
